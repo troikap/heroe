@@ -1,0 +1,10 @@
+.mat-dialog-actions {
+    display: flex;
+    justify-content: space-around;
+    .button-cancel {
+        box-shadow: 0 0 1px 1px red;
+    }
+    .button-accept {
+        box-shadow: 0 0 1px 1px green;
+    }
+}

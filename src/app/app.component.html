@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="loadingProvider.getLoading()" class="loading-background">
+  <mat-spinner></mat-spinner>
+</div>

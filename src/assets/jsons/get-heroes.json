@@ -1,0 +1,14 @@
+[
+    { "id": 1, "position": 1, "name": "Batman", "description": "Its cool", "birthdate": "05/05/1999", "type": "normal" },
+    { "id": 2, "position": 2, "name": "Robin", "description": "Its bad", "birthdate": "04/04/1995", "type": "normal" },
+    { "id": 3, "position": 3, "name": "Ironman", "description": "He is metal man ", "birthdate": "10/10/2000", "type": "legendario" },
+    { "id": 4, "position": 4, "name": "Spiderman", "description": "He is spider man ", "birthdate": "10/10/2015", "type": "epico" },
+    { "id": 5, "position": 5, "name": "Hulk", "description": "He is green man ", "birthdate": "10/10/2011", "type": "epico" },
+    { "id": 6, "position": 6, "name": "Superman", "description": "He is super man ", "birthdate": "10/10/2008", "type": "legendario" },
+    { "id": 7, "position": 7, "name": "Batman", "description": "Its cool", "birthdate": "05/05/1999", "type": "normal" },
+    { "id": 8, "position": 8, "name": "Robin", "description": "Its bad", "birthdate": "04/04/1995", "type": "normal" },
+    { "id": 9, "position": 9, "name": "Ironman", "description": "He is metal man ", "birthdate": "10/10/2000", "type": "legendario" },
+    { "id": 10, "position": 10, "name": "Spiderman", "description": "He is spider man ", "birthdate": "10/10/2015", "type": "epico" },
+    { "id": 11, "position": 11, "name": "Hulk", "description": "He is green man ", "birthdate": "10/10/2011", "type": "epico" },
+    { "id": 12, "position": 12, "name": "Superman", "description": "He is super man ", "birthdate": "10/10/2008", "type": "legendario" }
+]

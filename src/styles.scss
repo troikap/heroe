@@ -1,0 +1,11 @@
+@import './assets/styles/lists.scss';
+@import './assets/styles/tables.scss';
+@import './assets/styles/generics.scss';
+@import './assets/styles/forms.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    background-color: rgb(195, 201, 250);
+}

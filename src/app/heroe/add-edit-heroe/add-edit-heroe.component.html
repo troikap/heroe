@@ -1,0 +1,51 @@
+<h1>{{form.controls['id'].value ? 'Editar heroe' : 'Nuevo heroe'}}</h1>
+
+<div [formGroup]="form" class="form-primary">
+  <mat-grid-tile class="childrenWidth100">
+    <mat-form-field appearance="fill">
+      <mat-label>Posición</mat-label>
+      <input matInput formControlName="position" type="number" ngDefaultControl placeholder="Ingrese posición">
+      <mat-error *ngIf="(form.controls['position'].dirty || form.controls['position'].touched) && form.controls['position'].invalid">
+        <div *ngIf="form.controls['position'].errors?.['required']">Posición es requerida</div>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input appUpper matInput formControlName="name" type="text" ngDefaultControl placeholder="Ingrese nombre">
+      <mat-error *ngIf="(form.controls['name'].dirty || form.controls['name'].touched) && form.controls['name'].invalid">
+        <div *ngIf="form.controls['name'].errors?.['required']">Nombre es requerido</div>
+        <div *ngIf="form.controls['name'].errors?.['minlength']">Mínimo 3 caracteres</div>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Descripción</mat-label>
+      <input matInput formControlName="description" type="text" ngDefaultControl placeholder="Ingrese descripción">
+      <mat-error *ngIf="(form.controls['description'].dirty || form.controls['description'].touched) && form.controls['description'].invalid">
+        <div *ngIf="form.controls['description'].errors?.['required']">Descripción es requerida</div>
+        <div *ngIf="form.controls['name'].errors?.['minlength']">Mínimo 5 caracteres</div>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha de nacimiento</mat-label>
+      <input matInput formControlName="birthdate" type="date" ngDefaultControl placeholder="Ingrese fecha">
+      <mat-error *ngIf="(form.controls['birthdate'].dirty || form.controls['birthdate'].touched) && form.controls['birthdate'].invalid">
+        <div *ngIf="form.controls['birthdate'].errors?.['required']">Fecha de nacimiento es requerida</div>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Tipo</mat-label>
+      <mat-select matInput formControlName="type" ngDefaultControl>
+        <mat-option value="normal">Normal</mat-option>
+        <mat-option value="epico">Epico</mat-option>
+        <mat-option value="legendario">Legendario</mat-option>
+      </mat-select>
+      <mat-error *ngIf="(form.controls['type'].dirty || form.controls['type'].touched) && form.controls['type'].invalid">
+        <div *ngIf="form.controls['type'].errors?.['required']">Tipo es requerido</div>
+      </mat-error>
+    </mat-form-field>
+  </mat-grid-tile>
+  <div class="form-buttons">
+    <button class="secondary-btn" mat-button (click)="onClickBack()">Volver</button>
+    <button [disabled]="form.invalid" class="primary-btn" mat-button (click)="onClickSubmitForm()" cdkFocusInitial>{{form.controls['id'].value ? 'Editar heroe' : 'Agregar heroe'}}</button>
+  </div>
+</div>

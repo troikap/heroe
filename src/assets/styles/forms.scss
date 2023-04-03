@@ -1,0 +1,17 @@
+.form-primary {
+    background-color: white;
+    .form-buttons {
+        display: flex;
+        justify-content: end;
+        button {
+            margin: 0.5rem;
+            padding: 0.5rem;
+        }
+    }
+    .childrenWidth100 > * {
+        width: calc(50% - 1rem);
+    }
+    mat-form-field {
+        padding: 0.5rem;
+    }
+}
