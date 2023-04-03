@@ -79,7 +79,6 @@ export class HeroeService {
   }
 
   async resetHeroe() {
-    console.log('Se resetearon los datos');
     this.storageProvider.setObject('HEROES_KEY', await this.getHeroesJson());
     location.reload();
 	}

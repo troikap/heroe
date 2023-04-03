@@ -46,7 +46,6 @@ export class AddEditHeroeComponent implements OnInit {
       this.form.patchValue(response);
       this.loadingProvider.setLoading(false);
     } catch (error) {
-      console.log('ERROR ', error);
       this.toastProvider.presentToast('Problemas al encontrar heroe');
       this.loadingProvider.setLoading(false);
     }
@@ -63,7 +62,6 @@ export class AddEditHeroeComponent implements OnInit {
         this.router.navigateByUrl('list-heroe');
         this.loadingProvider.setLoading(false);
       } catch (error) {
-        console.log('ERROR ', error);
         this.toastProvider.presentToast('Problemas al crear heroe');
         this.loadingProvider.setLoading(false);
       }
@@ -74,7 +72,6 @@ export class AddEditHeroeComponent implements OnInit {
         this.router.navigateByUrl('list-heroe');
         this.loadingProvider.setLoading(false);
       } catch (error) {
-        console.log('ERROR ', error);
         this.toastProvider.presentToast('Problemas al editar heroe');
         this.loadingProvider.setLoading(false);
       }

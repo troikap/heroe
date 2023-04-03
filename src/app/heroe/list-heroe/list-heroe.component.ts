@@ -23,13 +23,10 @@ export class ListHeroeComponent implements OnInit {
     private alertProvider: AlertProvider,
     private router: Router,
     private loadingProvider: LoadingProvider
-  ) {
-    console.log('ListHeroeComponent');
-   }
+  ) {}
 
   ngOnInit(): void {
     this.getHeroes();
-    console.log('ListHeroeComponent');
   }
   
   async getHeroes(params?: {pageSize?: number, page?: number, value?: string}) {
@@ -47,7 +44,6 @@ export class ListHeroeComponent implements OnInit {
       this.tableSetting.pageSize = String(params.pageSize);
       this.loadingProvider.setLoading(false);
     } catch (error) {
-      console.log('ERROR ', error);
       this.toastProvider.presentToast('Se produjo un error al obtener los registros');
       this.loadingProvider.setLoading(false);
     }
@@ -66,15 +62,14 @@ export class ListHeroeComponent implements OnInit {
     if (!response) return;
     this.loadingProvider.setLoading(true);
     try {
-      this.heroeService.deleteHeroe(element.id);
+      await this.heroeService.deleteHeroe(element.id);
       this.loadingProvider.setLoading(false);
+      this.toastProvider.presentToast('Registro eliminado correctamente');
+      await this.getHeroes();
     } catch (error) {
-      console.log('ERROR ', error);
       this.toastProvider.presentToast('Se produjo un error al eliminar el registro');
       this.loadingProvider.setLoading(false);
     }
-    this.getHeroes();
-    this.toastProvider.presentToast('Registro eliminado correctamente');
   }
 
   filter(event: any) {
