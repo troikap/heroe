@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeroeModel } from 'src/app/core/models/heroe/heroe.model';
-import { AlertProvider } from 'src/app/core/providers/alert.provider';
-import { LoadingProvider } from 'src/app/core/providers/loading.provider';
-import { ToastProvider } from 'src/app/core/providers/toast.provider';
+import { AlertProvider } from 'src/app/core/providers/alert/alert.provider';
+import { LoadingProvider } from 'src/app/core/providers/loading/loading.provider';
+import { ToastProvider } from 'src/app/core/providers/toast/toast.provider';
 import { HeroeService } from 'src/app/core/services/heroe/heroe.service';
 
 @Component({

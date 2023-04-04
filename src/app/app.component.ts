@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingProvider } from './core/providers/loading.provider';
+import { LoadingProvider } from './core/providers/loading/loading.provider';
 
 @Component({
   selector: 'app-root',

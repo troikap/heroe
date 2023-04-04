@@ -1,4 +1,3 @@
-// import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,9 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class GenericHelper {
 
-  constructor(
-		// private http: HttpClient
-  ) { }
+  constructor() { }
 
   public getMaxId(array: any) {
     const maxValue = Math.max( ...array.map( (element: any) => parseInt(element.id) ))

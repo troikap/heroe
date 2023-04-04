@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HeroeModel } from 'src/app/core/models/heroe/heroe.model';
-import { LoadingProvider } from 'src/app/core/providers/loading.provider';
-import { ToastProvider } from 'src/app/core/providers/toast.provider';
+import { LoadingProvider } from 'src/app/core/providers/loading/loading.provider';
+import { ToastProvider } from 'src/app/core/providers/toast/toast.provider';
 import { HeroeService } from 'src/app/core/services/heroe/heroe.service';
 
 @Component({

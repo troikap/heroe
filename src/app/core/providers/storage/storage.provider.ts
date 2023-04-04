@@ -1,4 +1,3 @@
-// import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 const parametric: any = {
@@ -10,9 +9,7 @@ const parametric: any = {
 })
 export class StorageProvider {
 
-  constructor(
-		// private http: HttpClient
-  ) { }
+  constructor() { }
 
   public setObject(record: string, value: any) {
     return localStorage.setItem(record, JSON.stringify(value));

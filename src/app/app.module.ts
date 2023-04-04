@@ -25,6 +25,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { UpperDirective } from './core/directives/upper.directive';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -53,15 +55,16 @@ import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
     ReactiveFormsModule,
     MatSelectModule,
     MatProgressSpinnerModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule,
+    NoopAnimationsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-  exports: [
-    // HeaderComponent
-  ]
+  exports: []
 })
+
 export class AppModule { }

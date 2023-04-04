@@ -15,10 +15,14 @@ export class UpperDirective {
     this.toUpperText();
   }
 
+  @HostListener('keydown') onKeyDown2() {
+    this.toUpperText();
+  }
+
   private toUpperText() {
     setTimeout(() => {
       const nativeElement = this.elementRef.nativeElement;
       nativeElement.value = nativeElement.value.toUpperCase();
-    }, 200);
+    }, 100);
   }
 }
